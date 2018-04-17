@@ -97,6 +97,8 @@ function getDocCounts(currCounts, newCounts){
         deleted: 0,
         updated: 0
     };
+    if (!!currCounts) currCounts = newDocCounts;
+    if (!!newCounts) newCounts = newDocCounts;
 
     // queried
     if(currCounts.queried === 0){
